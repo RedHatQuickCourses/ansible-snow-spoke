@@ -1,3 +1,7 @@
 = Appendix
 
-FIXME: Content for Appendix...
+- https://www.servicenow.com/docs/bundle/zurich-impact/page/product/impact/task/configure-basic-auth-method.html[Configure the basic authentication method, window=_blank]
+
+- https://github.com/shadowman-lab/Ansible-SNOW/tree/main/SNOWSetup#servicenowaap-integration-instructions-using-ansible-spoke[Connecting ServiceNow and Ansible Automation Platform (AAP)]
+
+- https://www.servicenow.com/docs/r/integrate-applications/integration-hub/setup-ansible.html[Set up the Ansible spoke]

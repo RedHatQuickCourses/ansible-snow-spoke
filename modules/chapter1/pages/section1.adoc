@@ -1,6 +1,27 @@
-= Section 1
+= Ansible Automation platform Configuration
 
-* Create multiple copies of this section as needed.
-* Remove any unnecessary sections or chapter pages.
-* Customize the section as appropriate.
-* Ensure that each page contains a manageable amount of content.
+Integrating your ServiceNow instance with Ansible Tower (using the Ansible Spoke) enables you to automate Ansible-driven actions directly from ServiceNow. For example, you can design workflows that automatically or as per the requirement  triggers or execute tasks on the Ansible Automation Platform based on user requirements.
+
+Let's look into what is needed to setup the OAuth for the Service now and settings on the AAP to make the integration smooth: 
+
+. Log in to the Ansible Automation platform application instance using RHDP login page. 
+
+. Go to Settings from the left-hand menu, then open Miscellaneous Authentication Settings. Click Edit at the bottom of the page, enable the option “Allow External Users to Create OAuth2 Tokens”, and finally click the blue Save button to apply the changes.
+
+. Navigate to Access Management → OAuth Applications from the left-hand panel. Click the blue Create OAuth Application button at the top, which will open the Create Application dialog. Enter the required details in the following fields and copy the `Client ID` and `Client Secrets` as its displayed only once to somewhere else for using that in ServiceNow: 
++
+[NOTE]
+==== 
+ . Self-signed certificates may not be accepted in all environments, so it is recommended to configure your Ansible Automation Platform (AAP) instance with a certificate issued by a trusted Certificate Authority (CA) while working with the ServiceNow. 
+. We are using CA certificate in this Hands on Lab. 
+====
+
+. lets Download the certificate from the Brwoser click on the Lock sign in the web bar and then click on Connection Secure and click on more information 
+
+. Now Click on View Certificate and go down to Miscellaneous and Download PEM (cert). 
+
+
+Thats all we need at the Ansible Automation platform side and now lets work on the Service now side in the next section. 
+
+
+

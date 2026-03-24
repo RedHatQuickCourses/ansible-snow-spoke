@@ -1,7 +1,11 @@
-= Chapter 1
+= Product enablement: ServiceNow Integration with Ansible Automation Platform using Spoke
 
-In this section, we cover... FIXME
+This provides a comprehensive introduction to Product Enablement focused on integrating ServiceNow with the Ansible Automation Platform using the Spoke framework. Learners will gain hands-on experience in configuring secure communication by setting up OAuth authentication within Ansible Automation Platform 2.6, ensuring seamless and authorized connectivity between the two systems. The course will then guide participants through the process of designing and executing service catalog orders in ServiceNow, demonstrating how automated workflows can be triggered to efficiently resolve operational issues. By the end of the course, participants will understand how to leverage this integration to streamline IT service management, reduce manual effort, and accelerate incident resolution through automation.
 
+Learning Objectives: 
 
-- Add or remove section entries in the `antora.yaml` file as needed.
-- Ensure you create or delete the corresponding directory for the chapter accordingly.
+- Configure secure connectivity between ServiceNow and Ansible Automation Platform using OAuth via MID Server.
+- Build automated workflows in Flow Designer using Ansible Spoke actions.
+- Enable real-time updates from Ansible jobs back to ServiceNow tickets.
+- Identify required Integration Hub tiers and plugins for successful integration.
+

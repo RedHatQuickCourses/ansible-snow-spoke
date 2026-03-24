@@ -1,27 +1,35 @@
-= An Example Quick Course
+= Product enablement: ServiceNow Integration with Ansible Automation Platform using Spoke
 :navtitle: Home
 
 == Introduction
 
-Course Title: Course title FIXME
+Welcome to the ServiceNow and Ansible Automation Platform (AAP) Integration guide. In modern IT operations, the goal is often "closed-loop automation"—where a user request in a service catalog triggers a complex infrastructure task without manual intervention. By leveraging the ServiceNow Ansible Spoke, organizations can bridge the gap between ITSM workflows and powerful automation playbooks.
 
-Description:
-Course description FIXME
+This guide provides a practical walkthrough of connecting ServiceNow’s Flow Designer to an AAP workflow. Specifically, we will demonstrate how to trigger jobs from Service now and automatically update the associated ServiceNow Catalog Request upon completion. By using the Ansible Spoke, you eliminate the need to write complex custom scripts, instead utilizing a low-code interface to pass variables and manage API REST messages seamlessly.
 
-Duration: FIXME hours
-
-== Objectives
+== Learning Objectives
 
 On completing this course, you should be able to:
 
-* Observable, measurable objective...
-* Observable, measurable objective...
-* Observable, measurable objective...
+- Configure Connectivity: Establish a secure connection between ServiceNow and Ansible Automation Platform 1.2 or 2.x using the appropriate authentication method using OAuth via MID Server.
+
+- Utilize Flow Designer: Navigate the ServiceNow Flow Designer to build automated workflows that leverage the Ansible Spoke actions.
+
+- Automate Record Updates: Configure the integration to write data back to ServiceNow, ensuring that the status of infrastructure tasks (like RHEL patching) is reflected in the source ticket in real-time.
+
+- Validate Subscription Requirements: Identify the necessary Integration Hub tiers (Standard/Professional) and plugins required to sustain the connection.
 
 == Prerequisites
 
 This course assumes that you have the following prior experience:
 
-* Course or experience...
-* Course or experience...
-* Course or experience...
+- Possesses a functional understanding of AAP job templates and ServiceNow ITSM processes.
+
+== Contributors
+
+The PTL team acknowledges the valuable contributions of the following Red Hat associates:
+
+ - Alex Dworjan (Ansible Specialist Solution Architect)
+ - Karoly Vegh (Senior Specialist Solution Architect Ansible)
+ - Amrinder Singh (Content Architect)
+ - Anna Swicegood (Learning Product Manager)
