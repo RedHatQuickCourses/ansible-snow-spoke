@@ -113,12 +113,15 @@
 </aside>
 <article class="doc">
 <h1 class="page">Operational Flow: From Trigger to Execution</h1>
+<div class="paragraph">
+<p>The flow doesn&#8217;t just live inside ServiceNow. It can reach out via REST API to the Ansible Automation Platform (AAP) to launch playbooks, effectively bridging the gap between an ITSM request and infrastructure-level execution. This orchestration ensures that business logic is strictly enforced while providing a transparent, auditable trail of every automated step taken across the enterprise.</p>
+</div>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>Navigate to Process Automation → Flow Designer in ServiceNow, which opens a new tab.</p>
+<p>Navigate to <strong>Process Automation</strong> → <strong>Flow Designer</strong> in ServiceNow, which opens a new tab.</p>
 <div class="paragraph">
-<p>In the newly opened tab, click Actions, search for “Job" , and select the corresponding action:</p>
+<p>In the newly opened tab, click <strong>Actions</strong>, search for “Job" , and select the corresponding action:</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -167,7 +170,7 @@
 </div>
 </li>
 <li>
-<p>Return to the Flow Designer home by clicking Home (top-left). Click the blue New button, select Flow, and add the details according to the following screenshots.</p>
+<p>Return to the <strong>Flow Designer</strong> home by clicking Home (top-left). Click the blue <strong>New</strong> button, select Flow, and add the details according to the following screenshots.</p>
 <div class="imageblock">
 <div class="content">
 <img src="_images/3.8.png" alt="3.8">
@@ -185,7 +188,7 @@
 </div>
 </li>
 <li>
-<p>In the new flow, click Add a Trigger, choose Service Catalog, then enable Advanced Options.</p>
+<p>In the <strong>new</strong> flow, click <strong>Add a Trigger</strong>, choose <strong>Service Catalog</strong>, then enable Advanced Options.</p>
 <div class="paragraph">
 <p>By default, the <strong>Run flow in background (default)</strong> is selected.</p>
 </div>
@@ -201,7 +204,7 @@
 </div>
 </li>
 <li>
-<p>Under Actions, click Add an Action, Flow Logic, or Subflow, select Action, and choose Launch Job Template from the Ansible Spoke options. Click the blue Done button.</p>
+<p>Under <strong>Actions</strong>, click <strong>Add an Action, Flow Logic, or Subflow</strong>, select <strong>Action</strong>, and choose <strong>Launch Job Template</strong> from the Ansible Spoke options. Click the blue <strong>Done</strong> button.</p>
 <div class="imageblock">
 <div class="content">
 <img src="_images/3.13.png" alt="3.13">
@@ -224,10 +227,10 @@
 </div>
 </li>
 <li>
-<p>Click on the blue Done Button</p>
+<p>Click on the blue <strong>Done</strong> Button</p>
 </li>
 <li>
-<p>Navigate back to Service Catalog → Catalog Definitions → Maintain Items, and open the catalog item you created earlier. Go to Process Engine, set the Flow field to the flow that you created, then right-click the header area, and click Save.</p>
+<p>Navigate back to <strong>Service Catalog</strong> → <strong>Catalog Definitions</strong> → <strong>Maintain Items</strong>, and open the catalog item you created earlier. Go to Process Engine, set the Flow field to the flow that you created, then right-click the header area, and click Save.</p>
 <div class="imageblock">
 <div class="content">
 <img src="_images/3.17.png" alt="3.17">
@@ -250,7 +253,7 @@
 </div>
 </li>
 <li>
-<p>Go to Self-Service → Service Catalog, Add a new catalog and then click on the catalog item you just craeted and click on Order Now. You should see the request submitted in ServiceNow, and the corresponding job execution triggered in Ansible Automation Platform.</p>
+<p>Go to <strong>Self-Service</strong> → <strong>Service Catalog</strong>, Add a <strong>new catalog</strong> and then click on the catalog item you just created and click on <strong>Order Now</strong>. You should see the request submitted in ServiceNow, and the corresponding job execution triggered in Ansible Automation Platform.</p>
 <div class="imageblock">
 <div class="content">
 <img src="_images/3.21.png" alt="3.21">
