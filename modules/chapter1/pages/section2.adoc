@@ -2,13 +2,25 @@
 
 Setting up ServiceNow for integration with Ansible Automation Platform via the Spoke involves configuring authentication. This setup ensures that ServiceNow can seamlessly trigger and interact with automated workflows in AAP, allowing for efficient incident management, provisioning, and end-to-end IT operations automation. Proper configuration of roles, OAuth settings, and connectivity is essential to establish a reliable and secure Spoke connection between the two platforms.
 
-. Login to Service now Using the credentias shared . 
+. Login to Service now Using the credentias. 
 
 . Open the certificate file downloaded in the previous step, and copy its contents carefully, ensuring there are no extra spaces or line breaks.
++
+image::2.1.png[]
 
 . Navigate to System Definition → Certificates in ServiceNow. This will display a list of all certificates used by the platform. Click the blue New button and enter the required details as shown in the screenshot below: 
++
+image::2.2.png[]
++
+image::2.3.png[]
++
+image::2.4.png[]
 
 . Navigate to Connections & Credentials-->Connection & Credential Aliases. Click the existing "AnsibleTowerAlias" alias. In the resulting dialog window, ensure the following fields are filled in:
++
+image::2.5.png[]
++
+image::2.6.png[]
 
 .. Under Related Links select "Create New Connection & Credential" and enter in the following information:
 +
@@ -27,38 +39,58 @@ Setting up ServiceNow for integration with Ansible Automation Platform via the S
 |  Token URL | `https://<AAP-URL>/o/token/` 
 |  OAuth Redirect URL | `https://<snow_instance_id>.service-now.com/oauth_redirect.do` 
 |===
++
+image::2.7.png[]
++
+image::2.8.png[]
 
 .. Select Create and Get OAuth Token to complete the Ansible Spoke setup. A new window will appear prompting you to authorize ServiceNow against your Ansible Automation Platform instance or cluster. Click Authorize—this may initially fail with a 401 error, which is expected at this stage.
++
+image::2.9.png[]
 
-... To ensure jobs launch correctly in AAP 2.5 or later, update the API endpoint. Navigate to All → Connections & Credentials → Connections, open your newly created connection, and in the Attributes section, change the version from v2 to controller/v2. Click Update to save the changes.
+... Ensure jobs launch correctly in AAP 2.6 or later, update the API endpoint. Navigate to All → Connections & Credentials → Connections, open your newly created connection, and in the Attributes section, change the version from v2 to controller/v2. Click Update to save the changes.
++
+image::2.10.png[]
++
+image::2.11.png[]
++
+image::2.12.png[]
 
-... Next, go to System OAuth → Application Registry and select the application you created earlier. Remove the value in the OAuth API Script field, then click Update.
+... Go to System OAuth → Application Registry and select the application you created earlier. Remove the value in the OAuth API Script field, then click Update.
++
+image::2.13.png[]
++
+image::2.14.png[]
++
+image::2.15.png[]
++
+image::2.16.png[]
 
-... Finally, navigate to All → Connections & Credentials → Credentials and open your newly created credential. Under Related Links, click Get OAuth Token. When prompted, click Authorize again—this time, the process should complete successfully and generate the OAuth token.
+... Navigate to All → Connections & Credentials → Credentials and open your newly created credential. Under Related Links, click Get OAuth Token. When prompted, click Authorize again—this time, the process should complete successfully and generate the OAuth token.
++
+image::2.17.png[]
++
+image::2.18.png[]
++
+image::2.19.png[]
++
+image::2.20.png[]
++
+image::2.21.png[]
 
 
 . Navigate to Service Catalog → Catalog Definitions → Maintain Items in ServiceNow. On the resulting list page, click the blue New button. In the dialog that appears, fill in the following fields: 
++
+image::2.22.png[]
++
+image::2.23.png[]
++
+image::2.24.png[]
 
-. Navigate to Process Automation → Flow Designer in ServiceNow. This will open in a new tab. Click Actions, search for “Launch Job Template”, and select the corresponding action.
+.. If the category is not created follow the below to create one. 
++
+image::2.25.png[]
++
+image::2.26.png[]
 
-.. Once the action loads, click the three dots in the top-right corner and select Copy Action. Provide a new name and choose Ansible Spoke as the application in the dialog box.
-
-.. Enter in a name and select Ansible Spoke as the Application in the box that opens.
-
-.. Select Launch Workflow on the left-hand side 
-
-... In the copied action, select Launch Workflow from the left panel. Scroll down to the Resource Path section and update the URL so it appears as: `api/controller/v2/job_templates/step->Pre-Processing->workflow_job_template_id/launch`
-
-. Return to the Flow Designer home by clicking Home (top-left). Click the blue New button and select Flow.
-
-. In the new flow, click Add a Trigger, choose Service Catalog, then enable Advanced Options and select Run flow in background (default).
-
-. Under Actions, click Add an Action, Flow Logic, or Subflow, select Action, and choose Launch Job Template from the Ansible Spoke options. Click the blue Done button.
-
-. Click on the blue Done Button
-
-. Navigate back to Service Catalog → Catalog Definitions → Maintain Items, and open the catalog item you created earlier. Go to Process Engine, set the Flow field to the flow you just created, then right-click the header area and click Save.
-
-. To test the setup, go to Self-Service → Service Catalog, search for your catalog item, and click Order Now. You should see the request submitted in ServiceNow, and the corresponding job execution triggered in Ansible Automation Platform.
-
-Congratulations! After completing these steps, you can successfully use a ServiceNow Catalog Item to launch job templates in Ansible Automation Platform via the Ansible Spoke. This integration enables end users to leverage a familiar interface while triggering powerful backend automation, significantly improving efficiency and reducing time to value across the organization.
+NOW all is set and ready for the Operational Flow on how the execution will be done. 

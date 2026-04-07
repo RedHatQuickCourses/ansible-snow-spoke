@@ -1,8 +1,25 @@
-= Conclusion
+= Operational Flow: From Trigger to Execution
 
-- This setup demonstrated how to integrate ServiceNow with Ansible Automation Platform using the Ansible Spoke for seamless automation.
-- You learned how to configure secure authentication, manage certificates, and establish reliable API connectivity between the platforms.
-- The process highlighted how to customize actions and flows to trigger automation directly from ServiceNow.
-- It also showed how to empower end users through catalog items to execute backend automation without deep technical knowledge.
+. Navigate to Process Automation → Flow Designer in ServiceNow. This will open in a new tab. Click Actions, search for “Launch Job Template”, and select the corresponding action.
 
-Overall, this integration improves operational efficiency, enables self-service automation, and accelerates enterprise workflows.
+.. Once the action loads, click the three dots in the top-right corner and select Copy Action. Provide a new name and choose Ansible Spoke as the application in the dialog box.
+
+.. Enter in a name and select Ansible Spoke as the Application in the box that opens.
+
+.. Select Launch Workflow on the left-hand side 
+
+... In the copied action, select Launch Workflow from the left panel. Scroll down to the Resource Path section and update the URL so it appears as: `api/controller/v2/job_templates/step->Pre-Processing->workflow_job_template_id/launch`
+
+. Return to the Flow Designer home by clicking Home (top-left). Click the blue New button and select Flow.
+
+. In the new flow, click Add a Trigger, choose Service Catalog, then enable Advanced Options and select Run flow in background (default).
+
+. Under Actions, click Add an Action, Flow Logic, or Subflow, select Action, and choose Launch Job Template from the Ansible Spoke options. Click the blue Done button.
+
+. Click on the blue Done Button
+
+. Navigate back to Service Catalog → Catalog Definitions → Maintain Items, and open the catalog item you created earlier. Go to Process Engine, set the Flow field to the flow you just created, then right-click the header area and click Save.
+
+. To test the setup, go to Self-Service → Service Catalog, search for your catalog item, and click Order Now. You should see the request submitted in ServiceNow, and the corresponding job execution triggered in Ansible Automation Platform.
+
+Congratulations! After completing these steps, you can successfully use a ServiceNow Catalog Item to launch job templates in Ansible Automation Platform via the Ansible Spoke. This integration enables end users to leverage a familiar interface while triggering powerful backend automation, significantly improving efficiency and reducing time to value across the organization.

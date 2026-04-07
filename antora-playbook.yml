@@ -1,5 +1,5 @@
 site:
-  title: "ServiceNow Spoke - Advanced Orchestration with Ansible AAP"
+  title: "Product enablement: ServiceNow Integration with Ansible Automation Platform using Spoke"
   start_page: ansible-snow-spoke::index.adoc
 
 content:
