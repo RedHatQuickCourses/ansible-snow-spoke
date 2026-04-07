@@ -93,4 +93,4 @@ image::2.25.png[]
 +
 image::2.26.png[]
 
-NOW all is set and ready for the Operational Flow on how the execution will be done. 
+NOW we are all set and ready for the operational flow on how the execution will be done. 
