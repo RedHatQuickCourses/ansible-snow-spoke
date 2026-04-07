@@ -1,43 +1,37 @@
 = Ansible Automation platform Configuration
 
-Integrating your ServiceNow instance with Ansible Tower (using the Ansible Spoke) enables you to automate Ansible-driven actions directly from ServiceNow. For example, you can design workflows that automatically or as per the requirement  triggers or execute tasks on the Ansible Automation Platform based on user requirements.
+By integrating your ServiceNow instance with Ansible Tower (using the Ansible Spoke), you can automate Ansible-driven actions directly from ServiceNow. For example, you can design workflows that triggers automatically or as per the requirement, or execute tasks on the Ansible Automation Platform based on user requirements.
 
 Let's look into what is needed to setup the OAuth for the Service now and settings on the AAP to make the integration smooth: 
 
-. Log in to the Ansible Automation platform application instance using RHDP login page. 
+. Log in to the Ansible Automation platform application.  
 
-
-. Go to Settings from the left-hand menu, then open Platform gateway settings. Click Edit at the top-left of the page, set `enabled` on the option “Allow External Users to Create OAuth2 Tokens”, and finally click the blue `Save platform gateway settings` button to apply the changes.
+. Go to Settings from the *left-hand menu* and open *Platform gateway* settings. Click *Edit* at the *top-left* of the page, set `enabled` on the option *Allow External Users to Create OAuth2 Tokens*, and click the blue *Save platform gateway settings* button to apply the changes.
 +
 image::1.2.png[]
 +
 image::1.3.png[]
 
-. Navigate to Access Management → OAuth Applications from the left-hand panel. Click the blue `Create OAuth Application` button at the center, which will open the Create Application dialog. Enter the details in the following manner and copy the `Client ID` and `Client Secrets` as its displayed only once to somewhere else for using that in ServiceNow: 
+. Navigate to *Access Management* → *OAuth Applications* from the left-hand panel. Click the blue *Create OAuth Application* button at the center, which opens the *Create Application* dialog. Enter the details in the following manner and copy the *Client ID* and *Client Secrets* as its displayed only once. Further it will be used in ServiceNow while setting up *Connection and Credentials Alias*: 
 +
 image::1.4.png[]
 +
 image::1.5.png[]
 
-. lets Download the certificate from the Brwoser click on the Lock sign in the web bar and then click on Connection Secure and click on more information:
-+
-image::1.7.png[]
+. Download the certificate from the *Browser*. Click on the Lock sign in the web bar, click *Connection Secure*, and click on more information:
 +
 image::1.8.png[]
 +
 [NOTE]
 ==== 
- . Self-signed certificates may not be accepted in all environments, so it is recommended to configure your Ansible Automation Platform (AAP) instance with a certificate issued by a trusted Certificate Authority (CA) while working with the ServiceNow. 
-. We are using CA certificate in this Lab. 
+ * Since self-signed certificates may not be accepted in all environments, it is recommended to configure your Ansible Automation Platform (AAP) instance with a certificate issued by a trusted Certificate Authority (CA) while working with the ServiceNow. 
+* We are using CA certificate in this Lab. 
 ====
 
-. Now Click on View Certificate and go down to Miscellaneous and Download PEM (cert). 
+. Click on *View Certificate*, and navigate to *Miscellaneous and Download PEM* (cert). 
 +
 image::1.9.png[]
 +
 image::1.10.png[]
 
-Thats all we need at the Ansible Automation platform side and now lets work on the Service now side in the next section.
-
-
-
+Thats all we need at the Ansible Automation platform (AAP) side and now lets work on the Service now side in the next section.

@@ -1,6 +1,8 @@
 = Operational Flow: From Trigger to Execution
 
-. Navigate to Process Automation → Flow Designer in ServiceNow. This will open in a new tab. Click Actions, search for “Launch Job Template”, and select the corresponding action.
+. Navigate to Process Automation → Flow Designer in ServiceNow, which opens a new tab. 
++
+In the newly opened tab, click Actions, search for “Job" , and select the corresponding action:
 +
 image::3.1.png[]
 +
@@ -10,7 +12,7 @@ image::3.3.png[]
 +
 image::3.4.png[]
 
-.. Once the action loads, click the three dots in the top-right corner and select Copy Action. Provide a new name and choose Ansible Spoke as the application in the dialog box and click on *Copy* button. 
+.. Once the action loads, click the three dots in the top-right corner and select Copy Action. Provide a new name and choose Ansible Spoke as the application in the dialog box and click the *Copy* button. 
 +
 image::3.5.png[]
 +
@@ -20,7 +22,7 @@ image::3.6.png[]
 +
 image::3.7.png[]
 
-. Return to the Flow Designer home by clicking Home (top-left). Click the blue New button and select Flow and add the details according to the below screenshots. 
+. Return to the Flow Designer home by clicking Home (top-left). Click the blue New button, select Flow, and add the details according to the following screenshots. 
 +
 image::3.8.png[]
 +
@@ -28,7 +30,9 @@ image::3.9.png[]
 +
 image::3.10.png[]
 
-. In the new flow, click Add a Trigger, choose Service Catalog, then enable Advanced Options and select Run flow in background (default).
+. In the new flow, click Add a Trigger, choose Service Catalog, then enable Advanced Options.
++
+By default, the *Run flow in background (default)* is selected.
 +
 image::3.11.png[]
 +
@@ -46,7 +50,7 @@ image::3.16.png[]
 
 . Click on the blue Done Button
 
-. Navigate back to Service Catalog → Catalog Definitions → Maintain Items, and open the catalog item you created earlier. Go to Process Engine, set the Flow field to the flow you just created, then right-click the header area and click Save.
+. Navigate back to Service Catalog → Catalog Definitions → Maintain Items, and open the catalog item you created earlier. Go to Process Engine, set the Flow field to the flow that you created, then right-click the header area, and click Save.
 +
 image::3.17.png[]
 +

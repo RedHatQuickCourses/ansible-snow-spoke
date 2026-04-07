@@ -1,14 +1,14 @@
 = Settting up ServiceNow 
 
-Setting up ServiceNow for integration with Ansible Automation Platform via the Spoke involves configuring authentication. This setup ensures that ServiceNow can seamlessly trigger and interact with automated workflows in AAP, allowing for efficient incident management, provisioning, and end-to-end IT operations automation. Proper configuration of roles, OAuth settings, and connectivity is essential to establish a reliable and secure Spoke connection between the two platforms.
+Setting up ServiceNow for integration with Ansible Automation Platform (AAP) via the Spoke involves configuring authentication. This setup ensures that ServiceNow can seamlessly trigger and interact with automated workflows in AAP, allowing for efficient incident management, provisioning, and end-to-end IT operations automation. Proper configuration of roles, OAuth settings, and connectivity is essential to establish a reliable and secure Spoke connection between the two platforms.
 
-. Login to Service now Using the credentias. 
+. Login to Service now using the credential. 
 
-. Open the certificate file downloaded in the previous step, and copy its contents carefully, ensuring there are no extra spaces or line breaks.
+. Open the certificate file downloaded in the previous step, and copy the file contents carefully, ensuring there are no extra spaces or line breaks.
 +
 image::2.1.png[]
 
-. Navigate to System Definition → Certificates in ServiceNow. This will display a list of all certificates used by the platform. Click the blue New button and enter the required details as shown in the screenshot below: 
+. Navigate to *System Definition* → *Certificates* in ServiceNow to display a list of all certificates used by the platform. Click the blue *New* button and enter the required details as shown in the following screenshot: 
 +
 image::2.2.png[]
 +
@@ -16,15 +16,14 @@ image::2.3.png[]
 +
 image::2.4.png[]
 
-. Navigate to Connections & Credentials-->Connection & Credential Aliases. Click the existing "AnsibleTowerAlias" alias. In the resulting dialog window, ensure the following fields are filled in:
+. Navigate to *Connections & Credentials* -> *Connection & Credential Aliases*. Click the existing *AnsibleTowerAlias* alias. In the resulting dialog window, ensure the following fields are filled in:
 +
 image::2.5.png[]
 +
 image::2.6.png[]
 
-.. Under Related Links select "Create New Connection & Credential" and enter in the following information:
+.. In the Related Links section, select *Create New Connection & Credential* and enter the following information:
 +
-.[attribute]
 |===
 | Parameter | AAP 2.6 
 | Connection Name  | `<provider-name> Spoke Connection` 
@@ -44,11 +43,13 @@ image::2.7.png[]
 +
 image::2.8.png[]
 
-.. Select Create and Get OAuth Token to complete the Ansible Spoke setup. A new window will appear prompting you to authorize ServiceNow against your Ansible Automation Platform instance or cluster. Click Authorize—this may initially fail with a 401 error, which is expected at this stage.
+.. Select *Create* and *Get OAuth Token* to complete the Ansible Spoke setup. A new window prompts you to authorize ServiceNow against your Ansible Automation Platform instance or cluster. 
++
+Click the Authorize—this button that may initially fail with a *401 error*, which is expected at this stage.
 +
 image::2.9.png[]
 
-... Ensure jobs launch correctly in AAP 2.6 or later, update the API endpoint. Navigate to All → Connections & Credentials → Connections, open your newly created connection, and in the Attributes section, change the version from v2 to controller/v2. Click Update to save the changes.
+... Ensure that the jobs launch correctly in AAP 2.6 or later, update the API endpoint. Navigate to *All* → *Connections & Credentials* → *Connections*, open your newly created connection, and in the Attributes section, change the version from `v2` to `controller/v2`. Click Update to save the changes.
 +
 image::2.10.png[]
 +
@@ -56,7 +57,7 @@ image::2.11.png[]
 +
 image::2.12.png[]
 
-... Go to System OAuth → Application Registry and select the application you created earlier. Remove the value in the OAuth API Script field, then click Update.
+... Go to `System OAuth` → `Application Registry`, and select the application you created earlier. Remove the value in the *OAuth API Script* field, and click `Update`.
 +
 image::2.13.png[]
 +
@@ -66,7 +67,9 @@ image::2.15.png[]
 +
 image::2.16.png[]
 
-... Navigate to All → Connections & Credentials → Credentials and open your newly created credential. Under Related Links, click Get OAuth Token. When prompted, click Authorize again—this time, the process should complete successfully and generate the OAuth token.
+... Navigate to *All* → *Connections & Credentials* → *Credentials*, and open your newly created credential. In the Related Links section, click *Get OAuth Token*. When prompted, click *Authorize* again—this time
++
+The process should complete successfully and generate the *OAuth* token.
 +
 image::2.17.png[]
 +
@@ -78,8 +81,7 @@ image::2.20.png[]
 +
 image::2.21.png[]
 
-
-. Navigate to Service Catalog → Catalog Definitions → Maintain Items in ServiceNow. On the resulting list page, click the blue New button. In the dialog that appears, fill in the following fields: 
+. Navigate to *Service Catalog* → *Catalog Definitions* → *Maintain Items* in ServiceNow. On the resulting list page, click the blue New button. In the dialog that appears, fill in the following fields: 
 +
 image::2.22.png[]
 +
@@ -87,7 +89,7 @@ image::2.23.png[]
 +
 image::2.24.png[]
 
-.. If the category is not created follow the below to create one. 
+.. If the category is not created, create one by referring the following images: 
 +
 image::2.25.png[]
 +
