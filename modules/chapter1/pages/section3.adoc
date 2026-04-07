@@ -1,8 +1,10 @@
 = Operational Flow: From Trigger to Execution
 
-. Navigate to Process Automation → Flow Designer in ServiceNow, which opens a new tab. 
+The flow doesn't just live inside ServiceNow. It can reach out via REST API to the Ansible Automation Platform (AAP) to launch playbooks, effectively bridging the gap between an ITSM request and infrastructure-level execution. This orchestration ensures that business logic is strictly enforced while providing a transparent, auditable trail of every automated step taken across the enterprise.
+
+. Navigate to *Process Automation* → *Flow Designer* in ServiceNow, which opens a new tab. 
 +
-In the newly opened tab, click Actions, search for “Job" , and select the corresponding action:
+In the newly opened tab, click *Actions*, search for “Job" , and select the corresponding action:
 +
 image::3.1.png[]
 +
@@ -22,7 +24,7 @@ image::3.6.png[]
 +
 image::3.7.png[]
 
-. Return to the Flow Designer home by clicking Home (top-left). Click the blue New button, select Flow, and add the details according to the following screenshots. 
+. Return to the *Flow Designer* home by clicking Home (top-left). Click the blue *New* button, select Flow, and add the details according to the following screenshots. 
 +
 image::3.8.png[]
 +
@@ -30,7 +32,7 @@ image::3.9.png[]
 +
 image::3.10.png[]
 
-. In the new flow, click Add a Trigger, choose Service Catalog, then enable Advanced Options.
+. In the *new* flow, click *Add a Trigger*, choose *Service Catalog*, then enable Advanced Options.
 +
 By default, the *Run flow in background (default)* is selected.
 +
@@ -38,7 +40,7 @@ image::3.11.png[]
 +
 image::3.12.png[]
 
-. Under Actions, click Add an Action, Flow Logic, or Subflow, select Action, and choose Launch Job Template from the Ansible Spoke options. Click the blue Done button.
+. Under *Actions*, click *Add an Action, Flow Logic, or Subflow*, select *Action*, and choose *Launch Job Template* from the Ansible Spoke options. Click the blue *Done* button.
 +
 image::3.13.png[]
 +
@@ -48,9 +50,9 @@ image::3.15.png[]
 +
 image::3.16.png[]
 
-. Click on the blue Done Button
+. Click on the blue *Done* Button
 
-. Navigate back to Service Catalog → Catalog Definitions → Maintain Items, and open the catalog item you created earlier. Go to Process Engine, set the Flow field to the flow that you created, then right-click the header area, and click Save.
+. Navigate back to *Service Catalog* → *Catalog Definitions* → *Maintain Items*, and open the catalog item you created earlier. Go to Process Engine, set the Flow field to the flow that you created, then right-click the header area, and click Save.
 +
 image::3.17.png[]
 +
@@ -60,7 +62,7 @@ image::3.19.png[]
 +
 image::3.20.png[]
 
-. Go to Self-Service → Service Catalog, Add a new catalog and then click on the catalog item you just craeted and click on Order Now. You should see the request submitted in ServiceNow, and the corresponding job execution triggered in Ansible Automation Platform.
+. Go to *Self-Service* → *Service Catalog*, Add a *new catalog* and then click on the catalog item you just created and click on *Order Now*. You should see the request submitted in ServiceNow, and the corresponding job execution triggered in Ansible Automation Platform.
 +
 image::3.21.png[]
 +
