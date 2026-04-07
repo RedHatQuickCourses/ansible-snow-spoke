@@ -35,19 +35,12 @@
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
   <nav class="nav-menu">
-    <h3 class="title"><a href="../index.html">ServiceNow Spoke - Advanced Orchestration with Ansible AAP</a></h3>
+    <h3 class="title"><a href="../index.html">Product enablement ServiceNow Integration with Ansible Automation Platform using Spoke</a></h3>
 <ul class="nav-list">
   <li class="nav-item" data-depth="0">
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../index.html">Home</a>
-  </li>
-</ul>
-  </li>
-  <li class="nav-item" data-depth="0">
-<ul class="nav-list">
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../LABENV/index.html">Lab Environment</a>
   </li>
 </ul>
   </li>
@@ -85,12 +78,12 @@
 </div>
 <div class="nav-panel-explore" data-panel="explore">
   <div class="context">
-    <span class="title">ServiceNow Spoke - Advanced Orchestration with Ansible AAP</span>
+    <span class="title">Product enablement ServiceNow Integration with Ansible Automation Platform using Spoke</span>
     <span class="version">1</span>
   </div>
   <ul class="components">
     <li class="component is-current">
-      <a class="title" href="../index.html">ServiceNow Spoke - Advanced Orchestration with Ansible AAP</a>
+      <a class="title" href="../index.html">Product enablement ServiceNow Integration with Ansible Automation Platform using Spoke</a>
       <ul class="versions">
         <li class="version is-current is-latest">
           <a href="../index.html">1</a>
@@ -108,7 +101,7 @@
   <a href="../index.html" class="home-link"></a>
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
-    <li><a href="../index.html">ServiceNow Spoke - Advanced Orchestration with Ansible AAP</a></li>
+    <li><a href="../index.html">Product enablement ServiceNow Integration with Ansible Automation Platform using Spoke</a></li>
     <li><a href="index.html">Product enablement: ServiceNow Integration with Ansible Automation Platform using Spoke</a></li>
     <li><a href="section2.html">Settting up ServiceNow</a></li>
   </ul>
@@ -121,15 +114,15 @@
 <article class="doc">
 <h1 class="page">Settting up ServiceNow</h1>
 <div class="paragraph">
-<p>Setting up ServiceNow for integration with Ansible Automation Platform via the Spoke involves configuring authentication. This setup ensures that ServiceNow can seamlessly trigger and interact with automated workflows in AAP, allowing for efficient incident management, provisioning, and end-to-end IT operations automation. Proper configuration of roles, OAuth settings, and connectivity is essential to establish a reliable and secure Spoke connection between the two platforms.</p>
+<p>Setting up ServiceNow for integration with Ansible Automation Platform (AAP) via the Spoke involves configuring authentication. This setup ensures that ServiceNow can seamlessly trigger and interact with automated workflows in AAP, allowing for efficient incident management, provisioning, and end-to-end IT operations automation. Proper configuration of roles, OAuth settings, and connectivity is essential to establish a reliable and secure Spoke connection between the two platforms.</p>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>Login to Service now Using the credentias.</p>
+<p>Login to Service now using the credential.</p>
 </li>
 <li>
-<p>Open the certificate file downloaded in the previous step, and copy its contents carefully, ensuring there are no extra spaces or line breaks.</p>
+<p>Open the certificate file downloaded in the previous step, and copy the file contents carefully, ensuring there are no extra spaces or line breaks.</p>
 <div class="imageblock">
 <div class="content">
 <img src="_images/2.1.png" alt="2.1">
@@ -137,7 +130,7 @@
 </div>
 </li>
 <li>
-<p>Navigate to System Definition → Certificates in ServiceNow. This will display a list of all certificates used by the platform. Click the blue New button and enter the required details as shown in the screenshot below:</p>
+<p>Navigate to <strong>System Definition</strong> → <strong>Certificates</strong> in ServiceNow to display a list of all certificates used by the platform. Click the blue <strong>New</strong> button and enter the required details as shown in the following screenshot:</p>
 <div class="imageblock">
 <div class="content">
 <img src="_images/2.2.png" alt="2.2">
@@ -155,7 +148,7 @@
 </div>
 </li>
 <li>
-<p>Navigate to Connections &amp; Credentials-&#8594;Connection &amp; Credential Aliases. Click the existing "AnsibleTowerAlias" alias. In the resulting dialog window, ensure the following fields are filled in:</p>
+<p>Navigate to <strong>Connections &amp; Credentials</strong> &#8594; <strong>Connection &amp; Credential Aliases</strong>. Click the existing <strong>AnsibleTowerAlias</strong> alias. In the resulting dialog window, ensure the following fields are filled in:</p>
 <div class="imageblock">
 <div class="content">
 <img src="_images/2.5.png" alt="2.5">
@@ -169,9 +162,8 @@
 <div class="olist loweralpha">
 <ol class="loweralpha" type="a">
 <li>
-<p>Under Related Links select "Create New Connection &amp; Credential" and enter in the following information:</p>
+<p>In the Related Links section, select <strong>Create New Connection &amp; Credential</strong> and enter the following information:</p>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 1. [attribute]</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -239,7 +231,10 @@
 </div>
 </li>
 <li>
-<p>Select Create and Get OAuth Token to complete the Ansible Spoke setup. A new window will appear prompting you to authorize ServiceNow against your Ansible Automation Platform instance or cluster. Click Authorize—this may initially fail with a 401 error, which is expected at this stage.</p>
+<p>Select <strong>Create</strong> and <strong>Get OAuth Token</strong> to complete the Ansible Spoke setup. A new window prompts you to authorize ServiceNow against your Ansible Automation Platform instance or cluster.</p>
+<div class="paragraph">
+<p>Click the Authorize—this button that may initially fail with a <strong>401 error</strong>, which is expected at this stage.</p>
+</div>
 <div class="imageblock">
 <div class="content">
 <img src="_images/2.9.png" alt="2.9">
@@ -248,7 +243,7 @@
 <div class="olist lowerroman">
 <ol class="lowerroman" type="i">
 <li>
-<p>Ensure jobs launch correctly in AAP 2.6 or later, update the API endpoint. Navigate to All → Connections &amp; Credentials → Connections, open your newly created connection, and in the Attributes section, change the version from v2 to controller/v2. Click Update to save the changes.</p>
+<p>Ensure that the jobs launch correctly in AAP 2.6 or later, update the API endpoint. Navigate to <strong>All</strong> → <strong>Connections &amp; Credentials</strong> → <strong>Connections</strong>, open your newly created connection, and in the Attributes section, change the version from <code>v2</code> to <code>controller/v2</code>. Click Update to save the changes.</p>
 <div class="imageblock">
 <div class="content">
 <img src="_images/2.10.png" alt="2.10">
@@ -266,7 +261,7 @@
 </div>
 </li>
 <li>
-<p>Go to System OAuth → Application Registry and select the application you created earlier. Remove the value in the OAuth API Script field, then click Update.</p>
+<p>Go to <code>System OAuth</code> → <code>Application Registry</code>, and select the application you created earlier. Remove the value in the <strong>OAuth API Script</strong> field, and click <code>Update</code>.</p>
 <div class="imageblock">
 <div class="content">
 <img src="_images/2.13.png" alt="2.13">
@@ -289,7 +284,10 @@
 </div>
 </li>
 <li>
-<p>Navigate to All → Connections &amp; Credentials → Credentials and open your newly created credential. Under Related Links, click Get OAuth Token. When prompted, click Authorize again—this time, the process should complete successfully and generate the OAuth token.</p>
+<p>Navigate to <strong>All</strong> → <strong>Connections &amp; Credentials</strong> → <strong>Credentials</strong>, and open your newly created credential. In the Related Links section, click <strong>Get OAuth Token</strong>. When prompted, click <strong>Authorize</strong> again—this time</p>
+<div class="paragraph">
+<p>The process should complete successfully and generate the <strong>OAuth</strong> token.</p>
+</div>
 <div class="imageblock">
 <div class="content">
 <img src="_images/2.17.png" alt="2.17">
@@ -323,7 +321,7 @@
 </div>
 </li>
 <li>
-<p>Navigate to Service Catalog → Catalog Definitions → Maintain Items in ServiceNow. On the resulting list page, click the blue New button. In the dialog that appears, fill in the following fields:</p>
+<p>Navigate to <strong>Service Catalog</strong> → <strong>Catalog Definitions</strong> → <strong>Maintain Items</strong> in ServiceNow. On the resulting list page, click the blue New button. In the dialog that appears, fill in the following fields:</p>
 <div class="imageblock">
 <div class="content">
 <img src="_images/2.22.png" alt="2.22">
@@ -342,7 +340,7 @@
 <div class="olist loweralpha">
 <ol class="loweralpha" type="a">
 <li>
-<p>If the category is not created follow the below to create one.</p>
+<p>If the category is not created, create one by referring the following images:</p>
 <div class="imageblock">
 <div class="content">
 <img src="_images/2.25.png" alt="2.25">

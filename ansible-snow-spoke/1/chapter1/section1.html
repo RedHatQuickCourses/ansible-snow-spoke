@@ -35,19 +35,12 @@
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
   <nav class="nav-menu">
-    <h3 class="title"><a href="../index.html">ServiceNow Spoke - Advanced Orchestration with Ansible AAP</a></h3>
+    <h3 class="title"><a href="../index.html">Product enablement ServiceNow Integration with Ansible Automation Platform using Spoke</a></h3>
 <ul class="nav-list">
   <li class="nav-item" data-depth="0">
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../index.html">Home</a>
-  </li>
-</ul>
-  </li>
-  <li class="nav-item" data-depth="0">
-<ul class="nav-list">
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../LABENV/index.html">Lab Environment</a>
   </li>
 </ul>
   </li>
@@ -85,12 +78,12 @@
 </div>
 <div class="nav-panel-explore" data-panel="explore">
   <div class="context">
-    <span class="title">ServiceNow Spoke - Advanced Orchestration with Ansible AAP</span>
+    <span class="title">Product enablement ServiceNow Integration with Ansible Automation Platform using Spoke</span>
     <span class="version">1</span>
   </div>
   <ul class="components">
     <li class="component is-current">
-      <a class="title" href="../index.html">ServiceNow Spoke - Advanced Orchestration with Ansible AAP</a>
+      <a class="title" href="../index.html">Product enablement ServiceNow Integration with Ansible Automation Platform using Spoke</a>
       <ul class="versions">
         <li class="version is-current is-latest">
           <a href="../index.html">1</a>
@@ -108,7 +101,7 @@
   <a href="../index.html" class="home-link"></a>
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
-    <li><a href="../index.html">ServiceNow Spoke - Advanced Orchestration with Ansible AAP</a></li>
+    <li><a href="../index.html">Product enablement ServiceNow Integration with Ansible Automation Platform using Spoke</a></li>
     <li><a href="index.html">Product enablement: ServiceNow Integration with Ansible Automation Platform using Spoke</a></li>
     <li><a href="section1.html">Ansible Automation platform Configuration</a></li>
   </ul>
@@ -121,7 +114,7 @@
 <article class="doc">
 <h1 class="page">Ansible Automation platform Configuration</h1>
 <div class="paragraph">
-<p>Integrating your ServiceNow instance with Ansible Tower (using the Ansible Spoke) enables you to automate Ansible-driven actions directly from ServiceNow. For example, you can design workflows that automatically or as per the requirement  triggers or execute tasks on the Ansible Automation Platform based on user requirements.</p>
+<p>By integrating your ServiceNow instance with Ansible Tower (using the Ansible Spoke), you can automate Ansible-driven actions directly from ServiceNow. For example, you can design workflows that triggers automatically or as per the requirement, or execute tasks on the Ansible Automation Platform based on user requirements.</p>
 </div>
 <div class="paragraph">
 <p>Let&#8217;s look into what is needed to setup the OAuth for the Service now and settings on the AAP to make the integration smooth:</p>
@@ -129,10 +122,10 @@
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>Log in to the Ansible Automation platform application instance using RHDP login page.</p>
+<p>Log in to the Ansible Automation platform application.</p>
 </li>
 <li>
-<p>Go to Settings from the left-hand menu, then open Platform gateway settings. Click Edit at the top-left of the page, set <code>enabled</code> on the option “Allow External Users to Create OAuth2 Tokens”, and finally click the blue <code>Save platform gateway settings</code> button to apply the changes.</p>
+<p>Go to Settings from the <strong>left-hand menu</strong> and open <strong>Platform gateway</strong> settings. Click <strong>Edit</strong> at the <strong>top-left</strong> of the page, set <code>enabled</code> on the option <strong>Allow External Users to Create OAuth2 Tokens</strong>, and click the blue <strong>Save platform gateway settings</strong> button to apply the changes.</p>
 <div class="imageblock">
 <div class="content">
 <img src="_images/1.2.png" alt="1.2">
@@ -145,7 +138,7 @@
 </div>
 </li>
 <li>
-<p>Navigate to Access Management → OAuth Applications from the left-hand panel. Click the blue <code>Create OAuth Application</code> button at the center, which will open the Create Application dialog. Enter the details in the following manner and copy the <code>Client ID</code> and <code>Client Secrets</code> as its displayed only once to somewhere else for using that in ServiceNow:</p>
+<p>Navigate to <strong>Access Management</strong> → <strong>OAuth Applications</strong> from the left-hand panel. Click the blue <strong>Create OAuth Application</strong> button at the center, which opens the <strong>Create Application</strong> dialog. Enter the details in the following manner and copy the <strong>Client ID</strong> and <strong>Client Secrets</strong> as its displayed only once. Further it will be used in ServiceNow while setting up <strong>Connection and Credentials Alias</strong>:</p>
 <div class="imageblock">
 <div class="content">
 <img src="_images/1.4.png" alt="1.4">
@@ -158,12 +151,7 @@
 </div>
 </li>
 <li>
-<p>lets Download the certificate from the Brwoser click on the Lock sign in the web bar and then click on Connection Secure and click on more information:</p>
-<div class="imageblock">
-<div class="content">
-<img src="_images/1.7.png" alt="1.7">
-</div>
-</div>
+<p>Download the certificate from the <strong>Browser</strong>. Click on the Lock sign in the web bar, click <strong>Connection Secure</strong>, and click on more information:</p>
 <div class="imageblock">
 <div class="content">
 <img src="_images/1.8.png" alt="1.8">
@@ -176,15 +164,15 @@
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-<div class="olist arabic">
-<ol class="arabic">
+<div class="ulist">
+<ul>
 <li>
-<p>Self-signed certificates may not be accepted in all environments, so it is recommended to configure your Ansible Automation Platform (AAP) instance with a certificate issued by a trusted Certificate Authority (CA) while working with the ServiceNow.</p>
+<p>Since self-signed certificates may not be accepted in all environments, it is recommended to configure your Ansible Automation Platform (AAP) instance with a certificate issued by a trusted Certificate Authority (CA) while working with the ServiceNow.</p>
 </li>
 <li>
 <p>We are using CA certificate in this Lab.</p>
 </li>
-</ol>
+</ul>
 </div>
 </td>
 </tr>
@@ -192,7 +180,7 @@
 </div>
 </li>
 <li>
-<p>Now Click on View Certificate and go down to Miscellaneous and Download PEM (cert).</p>
+<p>Click on <strong>View Certificate</strong>, and navigate to <strong>Miscellaneous and Download PEM</strong> (cert).</p>
 <div class="imageblock">
 <div class="content">
 <img src="_images/1.9.png" alt="1.9">
@@ -207,7 +195,7 @@
 </ol>
 </div>
 <div class="paragraph">
-<p>Thats all we need at the Ansible Automation platform side and now lets work on the Service now side in the next section.</p>
+<p>Thats all we need at the Ansible Automation platform (AAP) side and now lets work on the Service now side in the next section.</p>
 </div>
 <nav class="pagination">
   <span class="prev"><a href="index.html">Product enablement: ServiceNow Integration with Ansible Automation Platform using Spoke</a></span>
