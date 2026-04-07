@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Settting up ServiceNow :: ServiceNow Spoke - Advanced Orchestration with Ansible AAP</title>
+    <title>Settting up ServiceNow :: Product enablement: ServiceNow Integration with Ansible Automation Platform using Spoke</title>
     <link rel="prev" href="section1.html">
     <link rel="next" href="section3.html">
     <meta name="generator" content="Antora 3.1.3">
@@ -15,7 +15,7 @@
   <nav class="navbar">
     <div class="navbar-brand">
       <a class="navbar-item" href="https://www.redhat.com" target="_blank"><img src="../../../_/img/redhat-logo.png" height="40px" alt="Red Hat"></a>
-      <a class="navbar-item" style="font-size: 24px; color: white" href="../../..">ServiceNow Spoke - Advanced Orchestration with Ansible AAP</a>
+      <a class="navbar-item" style="font-size: 24px; color: white" href="../../..">Product enablement: ServiceNow Integration with Ansible Automation Platform using Spoke</a>
       <button class="navbar-burger" data-target="topbar-nav">
         <span></span>
         <span></span>
@@ -64,7 +64,10 @@
     <a class="nav-link" href="section2.html">Settting up ServiceNow</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="section3.html">Conclusion</a>
+    <a class="nav-link" href="section3.html">Operational Flow: From Trigger to Execution</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="section4.html">Conclusion</a>
   </li>
 </ul>
   </li>
@@ -123,16 +126,46 @@
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>Login to Service now Using the credentias shared .</p>
+<p>Login to Service now Using the credentias.</p>
 </li>
 <li>
 <p>Open the certificate file downloaded in the previous step, and copy its contents carefully, ensuring there are no extra spaces or line breaks.</p>
+<div class="imageblock">
+<div class="content">
+<img src="_images/2.1.png" alt="2.1">
+</div>
+</div>
 </li>
 <li>
 <p>Navigate to System Definition → Certificates in ServiceNow. This will display a list of all certificates used by the platform. Click the blue New button and enter the required details as shown in the screenshot below:</p>
+<div class="imageblock">
+<div class="content">
+<img src="_images/2.2.png" alt="2.2">
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/2.3.png" alt="2.3">
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/2.4.png" alt="2.4">
+</div>
+</div>
 </li>
 <li>
 <p>Navigate to Connections &amp; Credentials-&#8594;Connection &amp; Credential Aliases. Click the existing "AnsibleTowerAlias" alias. In the resulting dialog window, ensure the following fields are filled in:</p>
+<div class="imageblock">
+<div class="content">
+<img src="_images/2.5.png" alt="2.5">
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/2.6.png" alt="2.6">
+</div>
+</div>
 <div class="olist loweralpha">
 <ol class="loweralpha" type="a">
 <li>
@@ -194,19 +227,94 @@
 </tr>
 </tbody>
 </table>
+<div class="imageblock">
+<div class="content">
+<img src="_images/2.7.png" alt="2.7">
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/2.8.png" alt="2.8">
+</div>
+</div>
 </li>
 <li>
 <p>Select Create and Get OAuth Token to complete the Ansible Spoke setup. A new window will appear prompting you to authorize ServiceNow against your Ansible Automation Platform instance or cluster. Click Authorize—this may initially fail with a 401 error, which is expected at this stage.</p>
+<div class="imageblock">
+<div class="content">
+<img src="_images/2.9.png" alt="2.9">
+</div>
+</div>
 <div class="olist lowerroman">
 <ol class="lowerroman" type="i">
 <li>
-<p>To ensure jobs launch correctly in AAP 2.5 or later, update the API endpoint. Navigate to All → Connections &amp; Credentials → Connections, open your newly created connection, and in the Attributes section, change the version from v2 to controller/v2. Click Update to save the changes.</p>
+<p>Ensure jobs launch correctly in AAP 2.6 or later, update the API endpoint. Navigate to All → Connections &amp; Credentials → Connections, open your newly created connection, and in the Attributes section, change the version from v2 to controller/v2. Click Update to save the changes.</p>
+<div class="imageblock">
+<div class="content">
+<img src="_images/2.10.png" alt="2.10">
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/2.11.png" alt="2.11">
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/2.12.png" alt="2.12">
+</div>
+</div>
 </li>
 <li>
-<p>Next, go to System OAuth → Application Registry and select the application you created earlier. Remove the value in the OAuth API Script field, then click Update.</p>
+<p>Go to System OAuth → Application Registry and select the application you created earlier. Remove the value in the OAuth API Script field, then click Update.</p>
+<div class="imageblock">
+<div class="content">
+<img src="_images/2.13.png" alt="2.13">
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/2.14.png" alt="2.14">
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/2.15.png" alt="2.15">
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/2.16.png" alt="2.16">
+</div>
+</div>
 </li>
 <li>
-<p>Finally, navigate to All → Connections &amp; Credentials → Credentials and open your newly created credential. Under Related Links, click Get OAuth Token. When prompted, click Authorize again—this time, the process should complete successfully and generate the OAuth token.</p>
+<p>Navigate to All → Connections &amp; Credentials → Credentials and open your newly created credential. Under Related Links, click Get OAuth Token. When prompted, click Authorize again—this time, the process should complete successfully and generate the OAuth token.</p>
+<div class="imageblock">
+<div class="content">
+<img src="_images/2.17.png" alt="2.17">
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/2.18.png" alt="2.18">
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/2.19.png" alt="2.19">
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/2.20.png" alt="2.20">
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/2.21.png" alt="2.21">
+</div>
+</div>
 </li>
 </ol>
 </div>
@@ -216,56 +324,47 @@
 </li>
 <li>
 <p>Navigate to Service Catalog → Catalog Definitions → Maintain Items in ServiceNow. On the resulting list page, click the blue New button. In the dialog that appears, fill in the following fields:</p>
-</li>
-<li>
-<p>Navigate to Process Automation → Flow Designer in ServiceNow. This will open in a new tab. Click Actions, search for “Launch Job Template”, and select the corresponding action.</p>
+<div class="imageblock">
+<div class="content">
+<img src="_images/2.22.png" alt="2.22">
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/2.23.png" alt="2.23">
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/2.24.png" alt="2.24">
+</div>
+</div>
 <div class="olist loweralpha">
 <ol class="loweralpha" type="a">
 <li>
-<p>Once the action loads, click the three dots in the top-right corner and select Copy Action. Provide a new name and choose Ansible Spoke as the application in the dialog box.</p>
-</li>
-<li>
-<p>Enter in a name and select Ansible Spoke as the Application in the box that opens.</p>
-</li>
-<li>
-<p>Select Launch Workflow on the left-hand side</p>
-<div class="olist lowerroman">
-<ol class="lowerroman" type="i">
-<li>
-<p>In the copied action, select Launch Workflow from the left panel. Scroll down to the Resource Path section and update the URL so it appears as: <code>api/controller/v2/job_templates/step&#8594;Pre-Processing&#8594;workflow_job_template_id/launch</code></p>
-</li>
-</ol>
+<p>If the category is not created follow the below to create one.</p>
+<div class="imageblock">
+<div class="content">
+<img src="_images/2.25.png" alt="2.25">
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/2.26.png" alt="2.26">
+</div>
 </div>
 </li>
 </ol>
 </div>
-</li>
-<li>
-<p>Return to the Flow Designer home by clicking Home (top-left). Click the blue New button and select Flow.</p>
-</li>
-<li>
-<p>In the new flow, click Add a Trigger, choose Service Catalog, then enable Advanced Options and select Run flow in background (default).</p>
-</li>
-<li>
-<p>Under Actions, click Add an Action, Flow Logic, or Subflow, select Action, and choose Launch Job Template from the Ansible Spoke options. Click the blue Done button.</p>
-</li>
-<li>
-<p>Click on the blue Done Button</p>
-</li>
-<li>
-<p>Navigate back to Service Catalog → Catalog Definitions → Maintain Items, and open the catalog item you created earlier. Go to Process Engine, set the Flow field to the flow you just created, then right-click the header area and click Save.</p>
-</li>
-<li>
-<p>To test the setup, go to Self-Service → Service Catalog, search for your catalog item, and click Order Now. You should see the request submitted in ServiceNow, and the corresponding job execution triggered in Ansible Automation Platform.</p>
 </li>
 </ol>
 </div>
 <div class="paragraph">
-<p>Congratulations! After completing these steps, you can successfully use a ServiceNow Catalog Item to launch job templates in Ansible Automation Platform via the Ansible Spoke. This integration enables end users to leverage a familiar interface while triggering powerful backend automation, significantly improving efficiency and reducing time to value across the organization.</p>
+<p>NOW all is set and ready for the Operational Flow on how the execution will be done.</p>
 </div>
 <nav class="pagination">
   <span class="prev"><a href="section1.html">Ansible Automation platform Configuration</a></span>
-  <span class="next"><a href="section3.html">Conclusion</a></span>
+  <span class="next"><a href="section3.html">Operational Flow: From Trigger to Execution</a></span>
 </nav>
 </article>
   </div>
