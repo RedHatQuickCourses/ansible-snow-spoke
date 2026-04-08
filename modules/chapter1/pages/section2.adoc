@@ -3,6 +3,12 @@
 Setting up ServiceNow for integration with Ansible Automation Platform (AAP) via the Spoke involves configuring authentication. This setup ensures that ServiceNow can seamlessly trigger and interact with automated workflows in AAP, allowing for efficient incident management, provisioning, and end-to-end IT operations automation. Proper configuration of roles, OAuth settings, and connectivity is essential to establish a reliable and secure Spoke connection between the two platforms.
 
 . Login to Service now using the credential. 
++
+[NOTE]
+==== 
+- Navigate to the ServiceNow Store and search for "Ansible Spoke" if its not installed and select the latest version and click Get to install it.
+====
+
 
 . Open the certificate file downloaded in the previous step, and copy the file contents carefully, ensuring there are no extra spaces or line breaks.
 +

@@ -15,7 +15,7 @@ On completing this course, you should be able to:
 
 - Utilize Flow Designer: Navigate the ServiceNow Flow Designer to build automated workflows that leverage the Ansible Spoke actions.
 
-- Automate Record Updates: Configure the integration to write data back to ServiceNow, ensuring that the status of infrastructure tasks (like RHEL patching) is reflected in the source ticket in real-time.
+- Automate Record Updates: Configure the integration to write data back to ServiceNow, ensuring that the status of infrastructure tasks is reflected in the source ticket in real-time.
 
 - Validate Subscription Requirements: Identify the necessary Integration Hub tiers (Standard/Professional) and plugins required to sustain the connection.
 
@@ -23,7 +23,7 @@ On completing this course, you should be able to:
 
 This course assumes that you have the following prior experience:
 
-- Possesses a functional understanding of AAP job templates and ServiceNow ITSM processes.
+- Possesses a functional understanding of Ansible Automation Platform (AAP) job templates and ServiceNow ITSM processes.
 
 == Contributors
 
