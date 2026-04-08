@@ -1,4 +1,4 @@
-= Appendix
+= References
 
 - https://www.servicenow.com/docs/bundle/zurich-impact/page/product/impact/task/configure-basic-auth-method.html[Configure the basic authentication method, window=_blank]
 
